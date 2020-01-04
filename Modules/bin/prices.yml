@@ -1,0 +1,68 @@
+#This is the price per level of each upgrade
+#Code allows for more levels
+Health:
+    MaxLvl: 10
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500
+    6: 600
+    7: 700
+    8: 800
+    9: 900
+    10: 1000
+#Code allows for more levels
+Speed:
+    MaxLvl: 4
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+#Code does allow for more levels
+WaterBreathing:
+    MaxLvl: 6
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500
+    6: 600
+#Code does not allow more levels due to specified percents. 
+#Contact Darrion if you want this changed
+AttackDmg:
+    MaxLvl: 5
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500
+#The potion effect for slow falling only needs one level
+#Max Level does not need to be changed
+SlowFalling:
+    MaxLvl: 1
+    1: 100
+#The potion effect for night vision only needs one level
+#Max Level does not need to be changed
+NightVision:
+    MaxLvl: 1
+    1: 100
+#The potion effect for fire resistance only needs one level
+#Max Level does not need to be changed
+FireResistance:
+    MaxLvl: 1
+    1: 100
+#All biome protectors protect the player 100% from any biome damage.
+#Max Level does not need to be changed
+HotProt:
+    MaxLvl: 1
+    1: 100
+ToxicProt:
+    MaxLvl: 1
+    1: 100
+RadiationProt:
+    MaxLvl: 1
+    1: 100
+ColdProt:
+    MaxLvl: 1
+    1: 100
