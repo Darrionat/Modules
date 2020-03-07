@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import me.Darrionat.Modules.Commands.Modules;
 import me.Darrionat.Modules.Files.FileManager;
 import me.Darrionat.Modules.GUI.ModuleShop;
+import me.Darrionat.Modules.GUI.ModuleShopPage2;
 import me.Darrionat.Modules.Listeners.AttackDamageModule;
 import me.Darrionat.Modules.Listeners.InventoryClick;
 import me.Darrionat.Modules.Listeners.KeepModuleOnDeath;
@@ -43,6 +44,7 @@ public class Main extends JavaPlugin {
 		new MoveIntoBiome(this);
 		new UpgradeModule();
 		ModuleShop.initialize(this);
+		ModuleShopPage2.initialize(this);
 
 		// Api and Dependencies
 		ActionBar actionbarapi = new ActionBar(this);

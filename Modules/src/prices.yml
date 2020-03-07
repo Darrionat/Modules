@@ -28,8 +28,7 @@ WaterBreathing:
     4: 400
     5: 500
     6: 600
-#Code does not allow more levels due to specified percents. 
-#Contact Darrion if you want this changed
+#Code does allow for more levels
 AttackDmg:
     MaxLvl: 5
     1: 100
@@ -64,5 +63,28 @@ RadiationProt:
     MaxLvl: 1
     1: 100
 ColdProt:
+    MaxLvl: 1
+    1: 100
+#All mob protectors protect the player from mob attacks.
+#Max Level does not need to be changed
+SpiderProt:
+    MaxLvl: 1
+    1: 100
+ZombieProt:
+    MaxLvl: 1
+    1: 100
+SkeletonProt:
+    MaxLvl: 1
+    1: 100
+EndermanProt:
+    MaxLvl: 1
+    1: 100
+PhantomProt:
+    MaxLvl: 1
+    1: 100
+CreeperProt:
+    MaxLvl: 1
+    1: 100
+PigmanProt:
     MaxLvl: 1
     1: 100

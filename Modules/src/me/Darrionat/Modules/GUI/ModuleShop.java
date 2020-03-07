@@ -155,6 +155,8 @@ public class ModuleShop {
 
 		// Close Menu and About Sign
 		Utils.createItem(inv, Material.RED_STAINED_GLASS_PANE, 1, 41, Utils.chat(config.getString("CloseMenu")));
+		Utils.createItem(inv, Material.ARROW, 1, 42, Utils.chat(strings.getString("nextPage")));
+
 		/*
 		 * if (config.getBoolean("InformationBookInGUI")) { Utils.createItem(inv,
 		 * Material.OAK_SIGN, 1, 42, Utils.chat(config.getString("Information")), ""); }
@@ -245,10 +247,15 @@ public class ModuleShop {
 		}
 
 		String closeMenu = Utils.chat(config.getString("CloseMenu"));
+		String nextPage = Utils.chat(config.getString("Strings.nextPage"));
 		// String information = Utils.chat(config.getString("Information"));
 
 		if (compareNames(clicked, closeMenu)) {
 			p.closeInventory();
+			return;
+		}
+		if (compareNames(clicked, nextPage)) {
+			p.openInventory(ModuleShopPage2.GUI(p, plugin));
 			return;
 		}
 		/*

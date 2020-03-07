@@ -31,6 +31,14 @@ public class ModuleInformation {
 		String radiationProt = Utils.chat(moduleNames.get(9));
 		String coldProt = Utils.chat(moduleNames.get(10));
 
+		String spiderProt = Utils.chat(moduleNames.get(11));
+		String zombieProt = Utils.chat(moduleNames.get(12));
+		String skeletonProt = Utils.chat(moduleNames.get(13));
+		String endermanProt = Utils.chat(moduleNames.get(14));
+		String phantomProt = Utils.chat(moduleNames.get(15));
+		String creeperProt = Utils.chat(moduleNames.get(16));
+		String pigmanProt = Utils.chat(moduleNames.get(17));
+
 		HashMap<String, String> typeMap = new HashMap<String, String>();
 		typeMap.put(health, "Health");
 		typeMap.put(speed, "Speed");
@@ -45,6 +53,14 @@ public class ModuleInformation {
 		typeMap.put(toxicProt, "ToxicProt");
 		typeMap.put(radiationProt, "RadiationProt");
 		typeMap.put(coldProt, "ColdProt");
+
+		typeMap.put(spiderProt, "SpiderProt");
+		typeMap.put(zombieProt, "ZombieProt");
+		typeMap.put(skeletonProt, "SkeletonProt");
+		typeMap.put(endermanProt, "EndermanProt");
+		typeMap.put(phantomProt, "PhantomProt");
+		typeMap.put(creeperProt, "CreeperProt");
+		typeMap.put(pigmanProt, "PigmanProt");
 
 		String upgradeType = typeMap.get(moduleName);
 		return upgradeType;
@@ -92,8 +108,8 @@ public class ModuleInformation {
 				continue;
 			}
 			ConfigurationSection strings = plugin.getConfig().getConfigurationSection("Strings");
-			int playerLevel = Integer
-					.parseInt((item.getItemMeta().getLore().get(0).replace(Utils.chat(strings.getString("level")), "")));
+			int playerLevel = Integer.parseInt(
+					(item.getItemMeta().getLore().get(0).replace(Utils.chat(strings.getString("level")), "")));
 			return playerLevel;
 
 		}

@@ -24,6 +24,14 @@ public class Maps {
 		moduleMaterial.put("ToxicProt", Material.getMaterial(materialList.get(8)));
 		moduleMaterial.put("RadiationProt", Material.getMaterial(materialList.get(9)));
 		moduleMaterial.put("ColdProt", Material.getMaterial(materialList.get(10)));
+
+		moduleMaterial.put("SpiderProt", Material.getMaterial(materialList.get(11)));
+		moduleMaterial.put("ZombieProt", Material.getMaterial(materialList.get(12)));
+		moduleMaterial.put("SkeletonProt", Material.getMaterial(materialList.get(13)));
+		moduleMaterial.put("EndermanProt", Material.getMaterial(materialList.get(14)));
+		moduleMaterial.put("PhantomProt", Material.getMaterial(materialList.get(15)));
+		moduleMaterial.put("CreeperProt", Material.getMaterial(materialList.get(16)));
+		moduleMaterial.put("PigmanProt", Material.getMaterial(materialList.get(17)));
 		return moduleMaterial;
 	}
 

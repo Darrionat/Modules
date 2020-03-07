@@ -39,14 +39,8 @@ public class AttackDamageModule implements Listener {
 		}
 		// When the player has the module
 		int level = ModuleInformation.getPlayerModuleLevel(p, attackDmg, plugin);
-		List<Integer> dmgLvls = new ArrayList<Integer>();
-		dmgLvls.add(0);
-		dmgLvls.add(2);
-		dmgLvls.add(5);
-		dmgLvls.add(10);
-		dmgLvls.add(14);
-		dmgLvls.add(17);
-		e.setDamage(e.getDamage() * (1 + (dmgLvls.get(level) / 100)));
+		double percent = 1 + (level * 0.1);
+		e.setDamage(e.getDamage() * percent);
 		return;
 	}
 

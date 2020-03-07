@@ -1,7 +1,7 @@
 name: Modules
 main: me.Darrionat.Modules.Main
 description: A plugin with custom events and custom items with effects
-version: 1.01
+version: 1.03
 api-version: 1.13
 
 commands:

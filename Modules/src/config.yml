@@ -1,4 +1,6 @@
+#GUI Names must be different
 GUIName: "Modules"
+GUINamePg2: "Modules - Page 2"
 #Items in the bottom of the GUI
 CloseMenu: "&cClose Menu"
 keepModulesOnDeath: true
@@ -53,6 +55,14 @@ ModuleNames:
     - "&aSlime Coating"
     - "&dEnd Jewel"
     - "&bFrozen Heart"
+    - "&cSpider Protector"
+    - "&2Zombie Protector"
+    - "Skeleton Protector"
+    - "&dEnderman Protector"
+    - "&7Phantom Protector"
+    - "&aCreeper Protector"
+    - "&4Pigman Protector"
+    
 MaterialList:
     - RED_DYE
     - FEATHER
@@ -65,8 +75,17 @@ MaterialList:
     - SLIME_BALL
     - ENDER_PEARL
     - SNOWBALL
+    - STRING
+    - ROTTEN_FLESH
+    - BONE
+    - CHORUS_FRUIT
+    - PHANTOM_MEMBRANE
+    - TNT
+    - GOLD_NUGGET
 Strings:
     #In the GUI
+    nextPage: "&7Next Page"
+    goBackPage: "&7Go Back"
     upgradeable: "&7[&aUpgradeable&7] &aModule"
     nonUpgradeable: "&7[&cNon-Upgradeable&7] &cModule"
     MaxedModule: "&c(Maxed)"
@@ -83,6 +102,13 @@ Strings:
     toxicProtDesc: "&6(Immunity to &dtoxic &6areas)"
     radiationProtDesc: "&6(Immunity to &dradiation&6)"
     coldProtDesc: "&6(Immunity to the &bcold&6)"
+    spiderProtDesc: "&6(Immune to &cSpider &6Attacks)"
+    zombieProtDesc: "&6(Immune to &2Zombie &6Attacks)"
+    skeletonProtDesc: "&6(Immune to &fSkeleton &6Attacks)"
+    endermanProtDesc: "&6(Immune to &dEnderman &6Attacks)"
+    phantomProtDesc: "&6(Immune to &7Phantom &6Attacks)"
+    creeperProtDesc: "&6(Immune to &aCreeper &6Attacks)"
+    pigmanProtDesc: "&6(Immune to &4Pigman &6Attacks)"
     #On the module
     level: "&eLevel: "
     playerName: "&e%player%"
