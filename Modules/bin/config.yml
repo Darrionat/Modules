@@ -42,6 +42,9 @@ messages:
     ToxicBiome: "&6You are unprotected in a &2Toxic &6bioime &c/modules"
     RadiationBiome: "&6You are unprotected in a &dRadiated &6bioime &c/modules"
     ColdBiome: "&6You are unprotected in a &bCold &6biome &c/modules"
+    Cooldown: "&a&l[MODULES] &7You must wait %secondsLeft%s until you can use that again"
+    WearElytra: "&a&l[MODULES] &7You must wear an elytra to use this"
+    NotOnGround: "&a&l[MODULES] &7You must be on the ground to use this"
 #These list correlate to each other
 ModuleNames:
     - "&cHealth"
@@ -62,6 +65,10 @@ ModuleNames:
     - "&7Phantom Protector"
     - "&aCreeper Protector"
     - "&4Pigman Protector"
+    - "&aSaturated"
+    - "&bLuck"
+    - "&4Fireball"
+    - "&3Elytra Jump"
     
 MaterialList:
     - RED_DYE
@@ -82,12 +89,17 @@ MaterialList:
     - PHANTOM_MEMBRANE
     - TNT
     - GOLD_NUGGET
+    - COOKED_BEEF
+    - GLISTERING_MELON_SLICE
+    - FIRE_CHARGE
+    - FIREWORK_ROCKET
 Strings:
     #In the GUI
     nextPage: "&7Next Page"
     goBackPage: "&7Go Back"
     upgradeable: "&7[&aUpgradeable&7] &aModule"
     nonUpgradeable: "&7[&cNon-Upgradeable&7] &cModule"
+    mobProtector: "&7[&cMob-Protector&7] &cModule"
     MaxedModule: "&c(Maxed)"
     priceInfo: "&eUpgrade: &a$%price%"
     currentLevel: "&eCurrent Level: %playerLvl%"
@@ -109,6 +121,11 @@ Strings:
     phantomProtDesc: "&6(Immune to &7Phantom &6Attacks)"
     creeperProtDesc: "&6(Immune to &aCreeper &6Attacks)"
     pigmanProtDesc: "&6(Immune to &4Pigman &6Attacks)"
+    hungerSlowDesc: "&6(Lose hunger &a%percent%% &6slower)"
+    luckDesc: "&6(Permanent &aLuck&6)"
+    fireballDesc: "&6(Shoot &cFireballs&6)"
+    elytraJumpDesc: "&6(Ability to jump &e%height% blocks &6with an elytra)"
+    
     #On the module
     level: "&eLevel: "
     playerName: "&e%player%"

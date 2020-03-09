@@ -88,3 +88,40 @@ CreeperProt:
 PigmanProt:
     MaxLvl: 1
     1: 100
+#More upgradeable modules
+#Allows player to lose hunger slower
+# Unlimtited, just adjust the percentage
+HungerSlow:
+    #This percentage is how many % the chance increases each level
+    UpgradePercent: 10
+    MaxLvl: 5
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500
+#Can go higher, not tested above 2
+Luck:
+    MaxLvl: 2
+    1: 100
+    2: 200
+#Unlimited, but not highly recommended 
+Fireball:
+    #In seconds
+    Cooldown: 900
+    MaxLvl: 5
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500
+#Unlimited, 5 blocks each tier
+ElytraJump:
+    #In seconds
+    Cooldown: 60
+    MaxLvl: 5
+    1: 100
+    2: 200
+    3: 300
+    4: 400
+    5: 500

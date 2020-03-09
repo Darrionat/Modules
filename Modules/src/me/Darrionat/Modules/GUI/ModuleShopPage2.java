@@ -53,8 +53,15 @@ public class ModuleShopPage2 {
 		String creeperProt = Utils.chat(moduleNames.get(16));
 		String pigmanProt = Utils.chat(moduleNames.get(17));
 
-		// String upgradeable = strings.getString("upgradeable");
-		String nonUpgradeable = strings.getString("nonUpgradeable");
+		String hungerSlow = Utils.chat(moduleNames.get(18));
+		String luck = Utils.chat(moduleNames.get(19));
+		String fireball = Utils.chat(moduleNames.get(20));
+		String elytraJump = Utils.chat(moduleNames.get(21));
+
+		String upgradeable = strings.getString("upgradeable");
+		// String nonUpgradeable = strings.getString("nonUpgradeable");
+		String mobProtector = strings.getString("mobProtector");
+
 		for (String moduleName : moduleNames) {
 			moduleName = Utils.chat(moduleName);
 			int playerLvl = ModuleInformation.getPlayerModuleLevel(p, moduleName, plugin);
@@ -75,32 +82,50 @@ public class ModuleShopPage2 {
 			String upgradeType = ModuleInformation.getUpradeType(moduleName, plugin);
 			Material moduleMaterial = moduleMaterialMap.get(upgradeType);
 			if (moduleName.equalsIgnoreCase(spiderProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 11, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 11, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("spiderProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(zombieProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 13, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 13, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("zombieProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(skeletonProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 15, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 15, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("skeletonProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(endermanProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 17, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 17, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("endermanProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(phantomProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 21, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 21, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("phantomProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(creeperProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 23, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 23, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("creeperProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(pigmanProt)) {
-				Utils.createItem(inv, moduleMaterial, 1, 25, moduleName, nonUpgradeable,
+				Utils.createItem(inv, moduleMaterial, 1, 25, moduleName, mobProtector,
 						currentLvl + Utils.chat(strings.getString("pigmanProtDesc")), priceInfo);
+			}
+			if (moduleName.equalsIgnoreCase(hungerSlow)) {
+				Utils.createItem(inv, moduleMaterial, 1, 29, moduleName, upgradeable,
+						currentLvl + Utils.chat(strings.getString("hungerSlowDesc")), priceInfo);
+			}
+			if (moduleName.equalsIgnoreCase(luck)) {
+				Utils.createItem(inv, moduleMaterial, 1, 31, moduleName, upgradeable,
+						currentLvl + Utils.chat(strings.getString("luckDesc")), priceInfo);
+			}
+			if (moduleName.equalsIgnoreCase(fireball)) {
+				Utils.createItem(inv, moduleMaterial, 1, 33, moduleName, upgradeable,
+						currentLvl + Utils.chat(strings.getString("fireballDesc")), priceInfo);
+			}
+			if (moduleName.equalsIgnoreCase(elytraJump)) {
+				Utils.createItem(inv, moduleMaterial, 1, 35, moduleName, upgradeable,
+						currentLvl + Utils.chat(
+								strings.getString("elytraJumpDesc").replace("%height%", String.valueOf(5 * playerLvl))),
+						priceInfo);
 			}
 		}
 		Utils.createItem(inv, Material.RED_STAINED_GLASS_PANE, 1, 41, Utils.chat(config.getString("CloseMenu")));
@@ -137,6 +162,11 @@ public class ModuleShopPage2 {
 		String creeperProt = Utils.chat(moduleNames.get(16));
 		String pigmanProt = Utils.chat(moduleNames.get(17));
 
+		String hungerSlow = Utils.chat(moduleNames.get(18));
+		String luck = Utils.chat(moduleNames.get(19));
+		String fireball = Utils.chat(moduleNames.get(20));
+		String elytraJump = Utils.chat(moduleNames.get(21));
+
 		if (compareNames(clicked, spiderProt) && slot == 11) {
 			UpgradeModule.upgrade(p, plugin, "SpiderProt", spiderProt);
 		}
@@ -163,6 +193,22 @@ public class ModuleShopPage2 {
 		}
 		if (compareNames(clicked, pigmanProt) && slot == 25) {
 			UpgradeModule.upgrade(p, plugin, "PigmanProt", pigmanProt);
+			return;
+		}
+		if (compareNames(clicked, hungerSlow) && slot == 29) {
+			UpgradeModule.upgrade(p, plugin, "HungerSlow", hungerSlow);
+			return;
+		}
+		if (compareNames(clicked, luck) && slot == 31) {
+			UpgradeModule.upgrade(p, plugin, "Luck", luck);
+			return;
+		}
+		if (compareNames(clicked, fireball) && slot == 33) {
+			UpgradeModule.upgrade(p, plugin, "Fireball", fireball);
+			return;
+		}
+		if (compareNames(clicked, elytraJump) && slot == 35) {
+			UpgradeModule.upgrade(p, plugin, "ElytraJump", elytraJump);
 			return;
 		}
 		String closeMenu = Utils.chat(config.getString("CloseMenu"));

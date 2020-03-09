@@ -39,6 +39,11 @@ public class ModuleInformation {
 		String creeperProt = Utils.chat(moduleNames.get(16));
 		String pigmanProt = Utils.chat(moduleNames.get(17));
 
+		String hungerSlow = Utils.chat(moduleNames.get(18));
+		String luck = Utils.chat(moduleNames.get(19));
+		String fireball = Utils.chat(moduleNames.get(20));
+		String elytraJump = Utils.chat(moduleNames.get(21));
+
 		HashMap<String, String> typeMap = new HashMap<String, String>();
 		typeMap.put(health, "Health");
 		typeMap.put(speed, "Speed");
@@ -61,6 +66,11 @@ public class ModuleInformation {
 		typeMap.put(phantomProt, "PhantomProt");
 		typeMap.put(creeperProt, "CreeperProt");
 		typeMap.put(pigmanProt, "PigmanProt");
+
+		typeMap.put(hungerSlow, "HungerSlow");
+		typeMap.put(luck, "Luck");
+		typeMap.put(fireball, "Fireball");
+		typeMap.put(elytraJump, "ElytraJump");
 
 		String upgradeType = typeMap.get(moduleName);
 		return upgradeType;

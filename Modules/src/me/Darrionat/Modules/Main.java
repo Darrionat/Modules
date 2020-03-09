@@ -8,22 +8,27 @@ import me.Darrionat.Modules.Files.FileManager;
 import me.Darrionat.Modules.GUI.ModuleShop;
 import me.Darrionat.Modules.GUI.ModuleShopPage2;
 import me.Darrionat.Modules.Listeners.AttackDamageModule;
+import me.Darrionat.Modules.Listeners.EntityTarget;
+import me.Darrionat.Modules.Listeners.HungerSlowModule;
 import me.Darrionat.Modules.Listeners.InventoryClick;
 import me.Darrionat.Modules.Listeners.KeepModuleOnDeath;
 import me.Darrionat.Modules.Listeners.MoveIntoBiome;
 import me.Darrionat.Modules.Listeners.PlayerJoin;
-import me.Darrionat.Modules.Listeners.PreventProjectileModuleThrow;
+import me.Darrionat.Modules.Listeners.PreventModuleInteract;
 import me.Darrionat.Modules.Listeners.SlowFalling;
 import me.Darrionat.Modules.Listeners.WaterBreathingModule;
 import me.Darrionat.Modules.Timers.Cold;
 import me.Darrionat.Modules.Timers.FireResistance;
 import me.Darrionat.Modules.Timers.Health;
 import me.Darrionat.Modules.Timers.Hot;
+import me.Darrionat.Modules.Timers.Luck;
 import me.Darrionat.Modules.Timers.NightVision;
 import me.Darrionat.Modules.Timers.Radiation;
 import me.Darrionat.Modules.Timers.Speed;
 import me.Darrionat.Modules.Timers.Toxic;
 import me.Darrionat.Modules.Utils.ActionBar;
+import me.Darrionat.Modules.Utils.ElytraJump;
+import me.Darrionat.Modules.Utils.ShootFireball;
 import me.Darrionat.Modules.Utils.UpgradeModule;
 import net.milkbowl.vault.economy.Economy;
 
@@ -40,9 +45,13 @@ public class Main extends JavaPlugin {
 		new WaterBreathingModule(this);
 		new AttackDamageModule(this);
 		new SlowFalling(this);
-		new PreventProjectileModuleThrow(this);
+		new PreventModuleInteract(this);
 		new MoveIntoBiome(this);
 		new UpgradeModule();
+		new EntityTarget(this);
+		new HungerSlowModule(this);
+		new ShootFireball(this);
+		new ElytraJump(this);
 		ModuleShop.initialize(this);
 		ModuleShopPage2.initialize(this);
 
@@ -83,6 +92,8 @@ public class Main extends JavaPlugin {
 		nvTimer.startTimer();
 		FireResistance fireResTimer = new FireResistance(this);
 		fireResTimer.startTimer();
+		Luck luckTimer = new Luck(this);
+		luckTimer.startTimer();
 
 		Hot hotTimer = new Hot(this);
 		hotTimer.startSavannahTimer();
@@ -100,6 +111,7 @@ public class Main extends JavaPlugin {
 		coldTimer.startIcePlainsTimer();
 		coldTimer.startSnowyTimer();
 		coldTimer.startTaigaTimer();
+
 	}
 
 	// Vault Setup
