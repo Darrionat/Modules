@@ -23,7 +23,7 @@ public class Hot {
 	List<String> biomeBypass = maps.getBiomeBypassList();
 
 	public void startSavannahTimer() {
-		int time = plugin.getConfig().getInt("BiomeTimers.Hot.Savannah");
+		int time = plugin.getConfig().getInt("BiomeTimers.Hot.Savanna");
 		BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 		scheduler.scheduleSyncRepeatingTask(plugin, new Runnable() {
 			@Override
@@ -33,7 +33,7 @@ public class Hot {
 					if (biomeBypass.contains(p.getName())) {
 						return;
 					}
-					if (!biomeName.contains("SAVANNAH")) {
+					if (!biomeName.contains("SAVANNA")) {
 						return;
 					}
 					ConfigurationSection config = plugin.getConfig();
