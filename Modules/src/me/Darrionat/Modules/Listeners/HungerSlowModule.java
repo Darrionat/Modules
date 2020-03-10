@@ -32,6 +32,9 @@ public class HungerSlowModule implements Listener {
 		if (!(e.getEntity() instanceof Player)) {
 			return;
 		}
+		if (e.getItem() != null) {
+			return;
+		}
 		Player p = (Player) e.getEntity();
 		ConfigurationSection config = plugin.getConfig();
 		List<String> moduleNames = config.getStringList("ModuleNames");

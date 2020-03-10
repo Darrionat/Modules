@@ -96,7 +96,7 @@ public class Main extends JavaPlugin {
 		luckTimer.startTimer();
 
 		Hot hotTimer = new Hot(this);
-		hotTimer.startSavannahTimer();
+		hotTimer.startSavannaTimer();
 		hotTimer.startDesertTimer();
 		hotTimer.startMesaTimer();
 		hotTimer.startNetherTimer();

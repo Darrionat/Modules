@@ -46,7 +46,10 @@ public class ElytraJump {
 			return;
 		}
 		cooldowns.put(p.getName(), System.currentTimeMillis());
-		p.setVelocity(new Vector(0, (lvl * 5), 0));
+
+		double height = lvl * 5;
+		double x = (height + 16) / 18.7;
+		p.setVelocity(new Vector(0, x, 0));
 	}
 
 }

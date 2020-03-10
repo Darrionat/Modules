@@ -22,7 +22,7 @@ public class Hot {
 	Maps maps = new Maps();
 	List<String> biomeBypass = maps.getBiomeBypassList();
 
-	public void startSavannahTimer() {
+	public void startSavannaTimer() {
 		int time = plugin.getConfig().getInt("BiomeTimers.Hot.Savanna");
 		BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 		scheduler.scheduleSyncRepeatingTask(plugin, new Runnable() {

@@ -10,7 +10,7 @@ TimerLength: 5
 #How often each biome will damage a player. (In seconds)
 BiomeTimers:
     Hot:
-        Savannah: 60
+        Savanna: 60
         Mesa: 45
         Desert: 30
         Nether: 15
@@ -69,7 +69,6 @@ ModuleNames:
     - "&bLuck"
     - "&4Fireball"
     - "&3Elytra Jump"
-    
 MaterialList:
     - RED_DYE
     - FEATHER
@@ -125,7 +124,6 @@ Strings:
     luckDesc: "&6(Permanent &aLuck&6)"
     fireballDesc: "&6(Shoot &cFireballs&6)"
     elytraJumpDesc: "&6(Ability to jump &e%height% blocks &6with an elytra)"
-    
     #On the module
     level: "&eLevel: "
     playerName: "&e%player%"

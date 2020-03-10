@@ -36,7 +36,7 @@ public class MoveIntoBiome implements Listener {
 			return;
 		}
 		// Hot
-		if (biomeName.contains("SAVANNAH") || biomeName.contains("DESERT") || biomeName.contains("MESA")
+		if (biomeName.contains("SAVANNA") || biomeName.contains("DESERT") || biomeName.contains("MESA")
 				|| biomeName.contains("NETHER") || biomeName.contains("BADLANDS")) {
 			String hotProt = Utils.chat(moduleNames.get(7));
 			if (ModuleInformation.getModule(p, hotProt, plugin) == null) {

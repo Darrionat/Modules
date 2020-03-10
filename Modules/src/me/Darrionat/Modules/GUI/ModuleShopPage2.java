@@ -16,6 +16,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import me.Darrionat.Modules.Main;
+import me.Darrionat.Modules.Files.FileManager;
 import me.Darrionat.Modules.Utils.Maps;
 import me.Darrionat.Modules.Utils.ModuleInformation;
 import me.Darrionat.Modules.Utils.UpgradeModule;
@@ -110,8 +112,13 @@ public class ModuleShopPage2 {
 						currentLvl + Utils.chat(strings.getString("pigmanProtDesc")), priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(hungerSlow)) {
-				Utils.createItem(inv, moduleMaterial, 1, 29, moduleName, upgradeable,
-						currentLvl + Utils.chat(strings.getString("hungerSlowDesc")), priceInfo);
+				FileManager fileManager = new FileManager((Main) plugin);
+				FileConfiguration prices = fileManager.getDataConfig("prices");
+				int percent = playerLvl * prices.getInt("HungerSlow.UpgradePercent");
+				Utils.createItem(
+						inv, moduleMaterial, 1, 29, moduleName, upgradeable, currentLvl + Utils.chat(strings
+								.getString("hungerSlowDesc").replace("percent", String.valueOf(percent * playerLvl))),
+						priceInfo);
 			}
 			if (moduleName.equalsIgnoreCase(luck)) {
 				Utils.createItem(inv, moduleMaterial, 1, 31, moduleName, upgradeable,
