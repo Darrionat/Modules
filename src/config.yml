@@ -1,0 +1,130 @@
+#GUI Names must be different
+GUIName: "Modules"
+GUINamePg2: "Modules - Page 2"
+#Items in the bottom of the GUI
+CloseMenu: "&cClose Menu"
+keepModulesOnDeath: true
+#Intervals in seconds. High # is less lag, but less precision. 
+#Recommended = 5; Max (10 seconds)
+TimerLength: 5
+#How often each biome will damage a player. (In seconds)
+BiomeTimers:
+    Hot:
+        Savanna: 60
+        Mesa: 45
+        Desert: 30
+        Nether: 15
+    Toxic:
+        Swamp: 60
+        Mushroom: 45
+    Radiation:
+        End: 15
+    Cold:
+        Frozen: 30
+        Cold: 45
+        Taiga: 60
+        SnowyBiome: 45
+        Ice: 30
+#Warning messages that will appear when the player is in a harmful biome with no module
+SendWarningMessages: true
+messages:
+    OnlyPlayers: "&a&l[MODULES] &7Only players may use that command"
+    NoPermission: "&a&l[MODULES] &7You do not have the permission %perm% to use that command!"
+    MaxUpgrade: "&a&l[MODULES] &7That upgrade is already maxed out!"
+    NotYourModule: "&a&l[MODULES] &7That module is not yours to upgrade!"
+    NotEnoughMoney: "&a&l[MODULES] &7You do not have enough money to buy that!"
+    BuyModule: "&a&l[MODULES] &7You just bought a %type% &7module for &a$%price%"
+    UpgradeModule: "&a&l[MODULES] &7You just upgraded your %type% &7module to level &e%level%&7 for &a$%price%"
+    NoLongerBypassing: "&a&l[MODULES] &7You are no longer bypassing any type of biome damage"
+    Bypassing: "&a&l[MODULES] &7You are now bypassing all biome damage"
+    #Thse are the warning messages that appear above the hotbar
+    HotBiome: "&6You are unprotected in a &4Hot &6bioime &c/modules"
+    ToxicBiome: "&6You are unprotected in a &2Toxic &6bioime &c/modules"
+    RadiationBiome: "&6You are unprotected in a &dRadiated &6bioime &c/modules"
+    ColdBiome: "&6You are unprotected in a &bCold &6biome &c/modules"
+    Cooldown: "&a&l[MODULES] &7You must wait %secondsLeft%s until you can use that again"
+    WearElytra: "&a&l[MODULES] &7You must wear an elytra to use this"
+    NotOnGround: "&a&l[MODULES] &7You must be on the ground to use this"
+#These list correlate to each other
+ModuleNames:
+    - "&cHealth"
+    - "&eSpeed"
+    - "&bWater Breathing"
+    - "&4Attack Damage"
+    - "&bSlow Falling"
+    - "&eNight Vision"
+    - "&cFire Resistance"
+    - "&cHot Rod"
+    - "&aSlime Coating"
+    - "&dEnd Jewel"
+    - "&bFrozen Heart"
+    - "&cSpider Protector"
+    - "&2Zombie Protector"
+    - "Skeleton Protector"
+    - "&dEnderman Protector"
+    - "&7Phantom Protector"
+    - "&aCreeper Protector"
+    - "&4Pigman Protector"
+    - "&aSaturated"
+    - "&bLuck"
+    - "&4Fireball"
+    - "&3Elytra Jump"
+MaterialList:
+    - RED_DYE
+    - FEATHER
+    - LIGHT_BLUE_DYE
+    - QUARTZ
+    - CLAY_BALL
+    - GLOWSTONE_DUST
+    - SPIDER_EYE
+    - BLAZE_ROD
+    - SLIME_BALL
+    - ENDER_PEARL
+    - SNOWBALL
+    - STRING
+    - ROTTEN_FLESH
+    - BONE
+    - CHORUS_FRUIT
+    - PHANTOM_MEMBRANE
+    - TNT
+    - GOLD_NUGGET
+    - COOKED_BEEF
+    - GLISTERING_MELON_SLICE
+    - FIRE_CHARGE
+    - FIREWORK_ROCKET
+Strings:
+    #In the GUI
+    nextPage: "&7Next Page"
+    goBackPage: "&7Go Back"
+    upgradeable: "&7[&aUpgradeable&7] &aModule"
+    nonUpgradeable: "&7[&cNon-Upgradeable&7] &cModule"
+    mobProtector: "&7[&cMob-Protector&7] &cModule"
+    MaxedModule: "&c(Maxed)"
+    priceInfo: "&eUpgrade: &a$%price%"
+    currentLevel: "&eCurrent Level: %playerLvl%"
+    healthDesc: "&6(+%playerLvl% Hearts)"
+    speedDesc: "&6(+%percent%% Speed)"
+    waterBreathingDesc: "&6(+%duration%sec)"
+    attackDmgDesc: "&6(+%percent%% Damage)"
+    slowFallingDesc: "&6(Always fall slower)"
+    nightVisionDesc: "&6(Permanent &aNight Vision&6)"
+    fireResistanceDesc: "&6(Permanent &cFire Resistance&6)"
+    hotProtDesc: "&6(Immunity to &4hot &6areas)"
+    toxicProtDesc: "&6(Immunity to &dtoxic &6areas)"
+    radiationProtDesc: "&6(Immunity to &dradiation&6)"
+    coldProtDesc: "&6(Immunity to the &bcold&6)"
+    spiderProtDesc: "&6(Immune to &cSpider &6Attacks)"
+    zombieProtDesc: "&6(Immune to &2Zombie &6Attacks)"
+    skeletonProtDesc: "&6(Immune to &fSkeleton &6Attacks)"
+    endermanProtDesc: "&6(Immune to &dEnderman &6Attacks)"
+    phantomProtDesc: "&6(Immune to &7Phantom &6Attacks)"
+    creeperProtDesc: "&6(Immune to &aCreeper &6Attacks)"
+    pigmanProtDesc: "&6(Immune to &4Pigman &6Attacks)"
+    hungerSlowDesc: "&6(Lose hunger &a%percent%% &6slower)"
+    luckDesc: "&6(Permanent &aLuck&6)"
+    fireballDesc: "&6(Shoot &cFireballs&6)"
+    elytraJumpDesc: "&6(Ability to jump &e%height% blocks &6with an elytra)"
+    #On the module
+    level: "&eLevel: "
+    playerName: "&e%player%"
+    

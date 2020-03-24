@@ -1,0 +1,23 @@
+name: Modules
+main: me.Darrionat.Modules.Main
+description: A plugin with custom events and custom items with effects
+version: 1.13
+api-version: 1.13
+
+commands:
+  moduli:
+    aliases: [module, modules]
+    usage: </command> <bypassbiomes/help/reload>
+    
+permissions:
+  modules.*:
+    description: Gives access to all Modules commands
+    children:
+      modules.admin: true
+      modules.shop: true
+  modules.admin:
+    description: Allows a player to use all commands
+    default: op
+  modules.shop:
+    description: Allows a player to open up the shop
+    default: true
